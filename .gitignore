@@ -1,0 +1,21 @@
+# . gitignore
+dist/*
+dist/
+# ignore the javadoc
+doc/*
+doc/
+# compiled class files
+*.class
+# object files
+*.o
+# log files
+*.log
+# archive files
+*.tar
+*.gz
+*.tgz
+# editor backups
+*~
+# Mac specific system file
+.DS_Store
+\#*\#
