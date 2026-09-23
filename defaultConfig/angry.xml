@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BauernhofGameConfiguration version="1">
+	<Description>PLEASE specify a configuration next time. This makes me really angry, I dont like to work only s.t. you can enjoy me.</Description>
+	<NumCardsPerPlayerHand>7</NumCardsPerPlayerHand>
+	<NumDepositionAreaSlots>10</NumDepositionAreaSlots>
+	<CardColors>
+		<CardColor color="#c0809c">I</CardColor>
+		<CardColor color="#301d0e">Dont</CardColor>
+		<CardColor color="#437208">Want</CardColor>
+		<CardColor color="#333a4d">To</CardColor>
+		<CardColor color="#800080">Work</CardColor>
+		<CardColor color="#5e1d0f">And</CardColor>
+		<CardColor color="#f8b516">Am</CardColor>
+		<CardColor color="#195fd2">Angry</CardColor>
+	</CardColors>
+	<Cards>
+		<!-- ===== I ===== -->
+		<Card color="I" basevalue="9" name="ядосан" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-3">
+				<CardRef>лут</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="3">
+				<CardRef>љут</CardRef>
+			</Effect>
+		</Card>
+		<Card color="I" basevalue="9" name="лут" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-3">
+				<CardRef>ядосан</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="3">
+				<CardRef>kızgın</CardRef>
+			</Effect>
+		</Card>
+		<Card color="I" basevalue="7" name="uthukuthele" image="Angry">
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="6">
+				<CardRef>To</CardRef>
+				<CardRef>Wähle</CardRef>
+			</Effect>
+		</Card>
+		<Card color="I" basevalue="2" name="kızgın" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardRef>Your</CardRef>
+				<CardRef>Configuration</CardRef>
+				<CardRef>CONFIG_URATION</CardRef>
+				<CardColorRef>And</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="I" basevalue="3" name="љут" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="6">
+				<CardRef>CONFIG_URATION</CardRef>
+				<CardRef>Config</CardRef>
+			</Effect>
+		</Card>
+		<Card color="I" basevalue="3" name="сердитый" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="18">
+				<CardRef>kwaad</CardRef>
+			</Effect>
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardColorRef>Want</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="I" basevalue="6" name="θυμωμένος" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="5">
+				<CardRef>Eine</CardRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== Dont ===== -->
+		<Card color="Dont" basevalue="6" name="раззлаваны" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-10">
+				<CardRef>Nächstes</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="1" name="kwaad" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-5">
+				<CardRef>Mal</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="12" name="vihainen" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-10">
+				<CardRef>Mal</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="7" name="Sauer" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="4">
+				<CardRef>Und</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="4" name="Wütend" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="4">
+				<CardRef>Weiter</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="6" name="Bitte" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="12">
+				<CardRef>Weiter</CardRef>
+				<CardRef>Nicht</CardRef>
+			</Effect>
+			<Effect type="BLOCKED_IF_WITH" effectvalue="0">
+				<CardRef>DOES</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="5" name="dusmīgs" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="5">
+				<CardColorRef>Want</CardColorRef>
+			</Effect>
+			<Effect type="POINTS_FOREACH" effectvalue="2">
+				<CardColorRef>I</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="8" name="Nächstes" image="Angry">
+			<Effect type="BLOCKED_IF_WITH" effectvalue="0">
+				<CardRef>θυμωμένος</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="5">
+				<CardRef>Spiel</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="9" name="Mal" image="Angry">
+			<Effect type="BLOCKED_IF_WITH" effectvalue="0">
+				<CardRef>Eine</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="5">
+				<CardRef>Spiel</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="3" name="Eine" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="5">
+				<CardRef>θυμωμένος</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="10" name="Konfiguration" image="Angry">
+			<Effect type="BLOCKS_EVERY" effectvalue="0">
+				<CardColorRef>I</CardColorRef>
+				<CardColorRef>And</CardColorRef>
+				<CardRef>For</CardRef>
+			</Effect>
+			<Effect type="POINTS_FOREACH" effectvalue="40">
+				<CardColorRef>Am</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="Dont" basevalue="4" name="Auswählen" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardColorRef>Dont</CardColorRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="20">
+				<CardRef>Game</CardRef>
+				<CardRef>раззлаваны</CardRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== Want ===== -->
+		<Card color="Want" basevalue="2" name="Spiel" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardColorRef>Dont</CardColorRef>
+				<CardRef>θυμωμένος</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Want" basevalue="7" name="Nicht" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardColorRef>I</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="Want" basevalue="5" name="Weiter" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="2">
+				<CardColorRef>I</CardColorRef>
+				<CardColorRef>Dont</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="Want" basevalue="8" name="Sondern" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-5">
+				<CardRef>uthukuthele</CardRef>
+				<CardRef>љут</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Want" basevalue="6" name="Starte" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-5">
+				<CardRef>љут</CardRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== To ===== -->
+		<Card color="To" basevalue="9" name="Neu" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardColorRef>And</CardColorRef>
+				<CardRef>Used</CardRef>
+			</Effect>
+		</Card>
+		<Card color="To" basevalue="12" name="Und" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="3">
+				<CardRef>dusmīgs</CardRef>
+				<CardRef>Sauer</CardRef>
+				<CardRef>uthukuthele</CardRef>
+			</Effect>
+		</Card>
+		<Card color="To" basevalue="5" name="Wähle" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="3">
+				<CardRef>ядосан</CardRef>
+				<CardRef>лут</CardRef>
+				<CardRef>For</CardRef>
+			</Effect>
+		</Card>
+		<Card color="To" basevalue="28" name="Config" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="-5">
+				<CardColorRef>And</CardColorRef>
+			</Effect>
+			<Effect type="POINTS_FOREACH" effectvalue="5">
+				<CardColorRef>I</CardColorRef>
+			</Effect>
+			<Effect type="BLOCKED_IF_WITHOUT" effectvalue="0">
+				<CardRef>CONFIG_URATION</CardRef>
+			</Effect>
+		</Card>
+		<Card color="To" basevalue="4" name="Aus" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="4">
+				<CardColorRef>I</CardColorRef>
+				<CardColorRef>Dont</CardColorRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== Work ===== -->
+		<Card color="Work" basevalue="8" name="Please" image="Angry">
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="8">
+				<CardRef>Select</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Work" basevalue="8" name="Select" image="Angry">
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="8">
+				<CardRef>Please</CardRef>
+			</Effect>
+		</Card>
+		<!--<Card color="Work" basevalue="??" name="Kerze" image="kerze"></Card>-->
+		<Card color="Work" basevalue="3" name="Some" image="Angry">
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="18">
+				<CardRef>uthukuthele</CardRef>
+				<CardRef>Nicht</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Work" basevalue="4" name="Configuration" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="12">
+				<CardRef>THIS</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Work" basevalue="2" name="For" image="Angry">
+			<Effect type="POINTS_SUM_BASEVALUES" effectvalue="0">
+				<CardColorRef>I</CardColorRef>
+			</Effect>
+		</Card>
+		<!-- <Card color="Work" basevalue="??" name="Pflug" image="pflug"></Card> -->
+		<Card color="Work" basevalue="3" name="Your" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="9">
+				<CardRef>Spiel</CardRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== And ===== -->
+		<Card color="And" basevalue="14" name="Next" image="Angry">
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="15">
+				<CardRef>Gave</CardRef>
+				<CardRef>Consent</CardRef>
+			</Effect>
+		</Card>
+		<Card color="And" basevalue="23" name="Game" image="Angry">
+			<Effect type="BLOCKED_IF_WITH" effectvalue="0">
+				<CardRef>Next</CardRef>
+			</Effect>
+		</Card>
+		<Card color="And" basevalue="5" name="That" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="9">
+				<CardRef>ядосан</CardRef>
+				<CardRef>лут</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-9">
+				<CardRef>uthukuthele</CardRef>
+			</Effect>
+		</Card>
+		<Card color="And" basevalue="3" name="Gave" image="Angry">
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="12">
+				<CardRef>Used</CardRef>
+				<CardRef>Sauer</CardRef>
+				<CardRef>dusmīgs</CardRef>
+				<CardRef>Wütend</CardRef>
+			</Effect>
+		</Card>
+		<Card color="And" basevalue="8" name="Consent" image="Angry">
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="25">
+				<CardRef>Nicht</CardRef>
+				<CardRef>Next</CardRef>
+				<CardRef>Gave</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_CONJUNCTION" effectvalue="5">
+				<CardRef>Nicht</CardRef>
+				<CardRef>Neu</CardRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== Am ===== -->
+		<Card color="Am" basevalue="7" name="To" image="Angry">
+			<Effect type="BLOCKED_IF_WITHOUT" effectvalue="0">
+				<CardRef>vihainen</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Am" basevalue="6" name="Being" image="Angry">
+			<Effect type="BLOCKED_IF_WITH" effectvalue="0">
+				<CardRef>Wütend</CardRef>
+			</Effect>
+			<Effect type="POINTS_FLAT_DISJUNCTION" effectvalue="-1">
+				<CardRef>ядосан</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Am" basevalue="3" name="Used" image="Angry">
+			<Effect type="BLOCKED_IF_WITHOUT" effectvalue="0">
+				<CardRef>Nicht</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Am" basevalue="6" name="THIS" image="Angry">
+			<Effect type="BLOCKED_IF_WITHOUT" effectvalue="0">
+				<CardRef>Used</CardRef>
+			</Effect>
+		</Card>
+		<Card color="Am" basevalue="20" name="CONFIG_URATION" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="-7">
+				<CardColorRef>And</CardColorRef>
+			</Effect>
+		</Card>
+
+		<!-- ===== Angry ===== -->
+		<Card color="Angry" basevalue="50" name="DOES" image="Angry">
+			<Effect type="BLOCKS_EVERY" effectvalue="0">
+				<CardColorRef>I</CardColorRef>
+				<CardColorRef>Dont</CardColorRef>
+				<CardColorRef>And</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="Angry" basevalue="5" name="ACTIVELY" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="4">
+				<CardColorRef>I</CardColorRef>
+				<CardColorRef>Want</CardColorRef>
+			</Effect>
+		</Card>
+		<Card color="Angry" basevalue="10" name="REFUSE" image="Angry">
+			<Effect type="POINTS_FOREACH" effectvalue="4">
+				<CardRef>Nicht</CardRef>
+				<CardRef>Weiter</CardRef>
+				<CardRef>Spiel</CardRef>
+				<CardRef>kızgın</CardRef>
+			</Effect>
+			<Effect type="BLOCKS_EVERY" effectvalue="0">
+				<CardRef>сердитый</CardRef>
+				<CardRef>uthukuthele</CardRef>
+			</Effect>
+		</Card>
+	</Cards>
+</BauernhofGameConfiguration>

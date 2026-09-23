@@ -1,0 +1,63 @@
+<project name="projectapp2023" default="build">
+
+  <!-- Define properties -->
+  <property name="src.dir" value="src" />
+  <property name="build.dir" value="build" />
+  <property name="dist" value="dist" />
+  <property name="lib" value="lib" />
+  <property name ="doc.dir" location = "doc"/>
+
+  <!-- classpath for build, doc and dist -->
+	<path id="build.classpath">
+	<fileset dir="${lib}" includes="*.jar" />
+	</path>
+	<pathconvert property="manifest.classpath" pathsep=" ">
+		<path refid="build.classpath"/>
+		<mapper>
+		<chainedmapper>
+				<flattenmapper/>
+				<globmapper from="*.jar" to="${lib}/*.jar"/>
+			</chainedmapper>
+		</mapper>
+	</pathconvert>
+
+  <!-- Clean target -->
+  <target name="clean">
+    <delete dir="${build.dir}" />
+    <delete dir="${dist}" />
+  </target>
+
+  <!-- Compile target -->
+  <target name="compile">
+    <mkdir dir="${build.dir}" />
+    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+      <classpath refid="build.classpath" />
+    </javac>
+  </target>
+
+  <!-- Build target -->
+  <target name="build" depends="clean, compile">
+	<mkdir dir="${dist}"/>
+	<jar destfile="${dist}/game.jar" basedir="${build.dir}">
+		<zipgroupfileset dir="lib" includes="*.jar"/>
+		<manifest>
+			<attribute name="Main-Class" value="bauernhof.main.Main"/>
+			<attribute name="Class-Path" value="${manifest.classpath}"/>
+		</manifest>
+	</jar>
+	<delete dir="${build.dir}"/>
+  </target>
+
+  <!-- Javadoc target -->
+  <target name ="javadoc" >
+        <javadoc
+            sourcepath = "src"
+            destdir = "${doc.dir}"
+            author = "true"
+            version = "true"
+            private = "true">
+            <classpath refid ="build.classpath" />
+        </javadoc>
+    </target>  
+  
+</project>
