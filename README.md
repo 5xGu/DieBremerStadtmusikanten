@@ -1,3 +1,6 @@
+# Forword
+This game was created as a group project for a university course. To import it, it was required to copy the original repository. No changes have been made since 2023.
+
 # ProjectAPP2023
 
 ### Projectname
